@@ -1,1 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  background-color: black;
+  color: white;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.bg-circles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: radial-gradient(circle at 10% 20%, #ff0080 0%, transparent 25%),
+              radial-gradient(circle at 90% 10%, #00bfff 0%, transparent 25%),
+              radial-gradient(circle at 50% 80%, #00ffcc 0%, transparent 25%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: float 10s infinite alternate ease-in-out;
+}
+
+@keyframes float {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(1.1); opacity: 1; }
+}
  
